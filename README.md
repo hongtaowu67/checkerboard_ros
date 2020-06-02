@@ -5,7 +5,7 @@ Author: Hongtao Wu
 
 Date: June 03, 2020
 
-Part of the code is borrowed from [twu_checkerboard](https://github.com/tuw-robotics/tuw_marker_detection)
+Part of the code is borrowed from [twu_checkerboard](https://github.com/tuw-robotics/tuw_marker_detection). This repository includes software developed by the TU-Wien.
 
 
 This code is for captureing the pose of the checkerboard. It is built primary for hand-eye calibration purposes.
