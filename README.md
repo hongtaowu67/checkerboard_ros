@@ -13,6 +13,8 @@ This code is for captureing the pose of the checkerboard. It is built primary fo
 ## Usage
 Here we demonstrate the usage of the code with a depth camera (PrimeSense Carmine 1.09).
 
+The checkerboard we used can be found in `doc/`. It is a 6x7 checkerboard. The edge length of the squre is 2.56cm if printed with a letter size paper. The checkerbaord parameters can be set in `include/capture_checkerboard.h`.
+
 First, calibrate the intrinsic of the camera rgb and depth sensor with 
 Roslaunch the camera with [MonocularCalibration](http://wiki.ros.org/camera_calibration/Tutorials/MonocularCalibration) and OpenNI [IntrinsicCalibration](http://wiki.ros.org/openni_launch/Tutorials/IntrinsicCalibration). This would provide you with rectified images.
 
@@ -38,7 +40,7 @@ rosrun image_view image_view image:=/capture/pose_result
 ```
 
 ## TODO
-Write the launch file to include the camera topic
+Write the launch file to include the camera topic and the checkerboard dimension.
 
 
 
