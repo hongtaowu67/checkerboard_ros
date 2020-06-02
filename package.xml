@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+
+<package format="2">
+  <name>checkerboard_ros</name>
+  
+  <version>0.0.1</version>
+  
+  <description>
+  This package captures the pose of the camera, rgb, and depth (synced) and 
+  publish the pose of the camera and the pose estimation result (rgb image).
+  </description>
+  
+  <maintainer email="hwu67@jhu.edu">Hongtao Wu</maintainer>
+  
+  <license>MIT</license>
+  
+  <author email="hwu67@jhu.edu">Hongtao Wu</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>roscpp</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>cv_bridge</build_depend>
+  <build_depend>message_filters</build_depend>
+  <build_depend>tf</build_depend>
+  <build_depend>senor_msgs</build_depend>
+  <build_depend>image_geometry</build_depend>
+  <build_depend>image_transport</build_depend>
+
+  <exec_depend>roscpp</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>cv_bridge</exec_depend>
+  <exec_depend>message_filters</exec_depend>
+  <exec_depend>tf</exec_depend>
+  <exec_depend>senor_msgs</exec_depend>
+  <exec_depend>image_geometry</exec_depend>
+  <exec_depend>image_transport</exec_depend>
+</package>
