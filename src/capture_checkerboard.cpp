@@ -115,7 +115,7 @@ void CapturePoseCheckerboard::callBack( const ImageConstPtr& rgb, const CameraIn
             double lineThickness = 3;
 
             input_bridge = cv_bridge::toCvCopy( rgb, image_encodings::BGR8 );
-            ROS_INFO("Finish converting to BGR...\n");
+            // ROS_INFO("Finish converting to BGR...\n");
             image_rgb = input_bridge->image;
 
             cv::Mat_<double> Pi0 = projection_matrix * ( cv::Mat_<double> ( 4,1 ) << 0, 0, 0, 1 );
@@ -162,8 +162,15 @@ int main( int argc, char** argv )
 
     string check_pose_topic = "/capture/pose_check";
     string pose_result_topic = "/capture/pose_result";
-    string rgb_topic = "/camera/rgb/image_rect_color";
-    string rgb_cam_info_topic = "/camera/rgb/camera_info";
+    
+    // // PrimeSense
+    // string rgb_topic = "/camera/rgb/image_rect_color";
+    // string rgb_cam_info_topic = "/camera/rgb/camera_info";
+
+    // Intel Realsense
+    string rgb_topic = "/camera/color/image_raw";
+    string rgb_cam_info_topic = "/camera/color/camera_info";
+
     bool use_rect = true;
 
     CapturePoseCheckerboard CPC(check_pose_topic,
