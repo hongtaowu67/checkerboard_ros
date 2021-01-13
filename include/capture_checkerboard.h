@@ -62,7 +62,7 @@ class CapturePoseCheckerboard
             info_sub.subscribe( nh, rgb_cam_info_topic, 1);
 
             // Sleep for a second
-            ros::Duration(1, 0).sleep();
+            ros::Duration(1.0).sleep();
 
             sync_ptr.reset(new Sync( MySyncPolicy(10), rgb_sub, info_sub ) ); 
             sync_ptr->registerCallback( boost::bind( &CapturePoseCheckerboard::callBack, this, _1, _2) );
